@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<style>
+    /* Custom animation keyframes */
+    @keyframes fadeInFromFar {
+        0% { opacity: 0; transform: translateZ(-1000px); }
+        100% { opacity: 1; transform: translateZ(0); }
+    }
+
+    /* Custom animation keyframes for bullet points */
+    @keyframes slideInBullet {
+        0% { opacity: 0; transform: translateX(-20px); }
+        100% { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Custom animation keyframes for hero section background slide-in */
+    @keyframes slideInHeroBackground {
+        0% { background-position: 100% 0; }
+        100% { background-position: 0 0; }
+    }
+
+    /* Custom animation keyframes for hero section background color change */
+    @keyframes changeHeroBackground {
+        0% { background-color: rgba(0, 0, 0, 0.5); }
+        100% { background-color: #007bff; } /* Change the color as desired */
+    }
+
+    /* Apply the animations */
+    .hero {
+        animation: fadeInFromFar 1s ease-in-out, slideInHeroBackground 2s linear forwards, changeHeroBackground 0.5s linear 2s forwards;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        color: #ffffff; /* Set text color to white */
+    }
+
+    .about-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .about-list li {
+        animation: slideInBullet 1s ease-in-out;
+    }
+</style>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-dark text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Hello, I'm A.Rohit Purushothaman</h1>
+            <p class="lead">Web Developer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>About Me</h2>
+                    <ul class="about-list">
+                        <li>Greetings! I'm A. Rohit Purushothaman, a dedicated web developer specializing in backend solutions with the Django framework and Python. My journey into the world of coding was ignited by Python's versatility, and I've channeled my passion into creating robust web applications.
+
+                            With a knack for problem solving, I thrive on overcoming intricate challenges and crafting elegant solutions. My meticulous approach ensures that every project I handle is not only functional, but also refined to perfection. I have a creative disposition that adds a touch of innovation to every endeavor, enhancing user experiences and usability.</li>
+                        
+                        <!-- Add more points here -->
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img src="{% static 'images/profile.jpg' %}" alt="Profile Image" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

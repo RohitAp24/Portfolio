@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+
+<style>
+    /* Custom animation keyframes */
+    @keyframes slideInLeft {
+        0% { transform: translateX(-100%); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+        0% { transform: translateX(100%); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Apply the animations */
+    .about-left {
+        animation: slideInLeft 1s ease-in-out;
+    }
+
+    .education-right {
+        animation: slideInRight 1s ease-in-out;
+    }
+
+    .certifications-left {
+        animation: slideInLeft 1s ease-in-out;
+    }
+</style>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home">Home</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 about-left" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>About Me</h2>
+                    <ul class="about-list">
+                        <li>A.Rohit Purushothaman</li>
+                        <li>24-09-98</li>
+                        <li>7299928616</li>
+                        <li>Chennai</li>
+                        <li>rohitllenki@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-light py-5 education-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="text-left">Education</h2>
+                    <ul class="about-list">
+                        <li>SSLC: 
+                            <p style="margin-top: 10px;"> School Name: Chettinad Vidyashram<br>
+                            Grade: 7.0 CGPA<br>
+                            Year: 2014</p>
+                        </li>
+                        <li>HSLC: 
+                            <p style="margin-top: 10px;">School Name: MP ANANDH MATR HR.SEC SCHOOL<br>
+                            Grade: 63%<br>
+                            Year: 2016</p>
+                        </li>
+                        <li>UG: 
+                            <p style="margin-top: 10px;">College Name: SRM Institute of Science and Tehnology</p>
+                            <p style="margin-left: 40px;">Electronics and Communication Engineering</p>
+                            GPA: 5<br>
+                            Year of Graduation: 2020</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Empty column to balance layout -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 certifications-left">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="text-left">Certifications</h2>
+                    <ul class="about-list">
+                        <li><strong>Certificate 1:</strong></li> 
+
+                        <p style="margin-top: 10px;">Certificate Name: Certified Ethical Hacker (CEH)<br>
+                        Issuing Organization: EC-COUNCIL<br>
+                        Year: 2021</p>
+
+                        <li><strong>Certificate 2:</strong></li> 
+
+
+                            <p style="margin-top: 10px;">Certificate Name: Python<br>
+                            Issuing Organization: SLA<br>
+                            Year: 2022</p>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Empty column to balance layout -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- ... (same as previous pages) ... -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><!-- Bootstrap and jQuery scripts -->
+    <!-- ... (same as previous pages) ... -->
+</body>
+</html>
